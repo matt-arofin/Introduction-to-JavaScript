@@ -311,9 +311,26 @@ HINT - try looking up the .includes() method
 */
 
 
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
+function vowelCounter(str1) {
+  let count=0;
+  console.log(str1);
+  for(let i=0;i<str1.length;i++){
+    if(str1.charAt(i) == ("a"||"e"||"i"||"o"||"u"||"A"||"E"||"I"||"O"||"U")){
+      count+=1;
+    }
+    else{
+      continue;
+    }
+  } if(count==0){
+      return `There are no vowels in the string: "${str1}"`;
+  } else if(count == 1){
+      return `There is ${count} vowel in the string: "${str1}"`
+  } else{
+      return `There are ${count} vowels in the string: "${str1}"`
+  }
 }
+
+console.log(vowelCounter("Bananas are delicious"))
 
 
 
